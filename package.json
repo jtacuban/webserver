@@ -1,5 +1,5 @@
 {
-  "name": "docker-nginx-webserver",
+  "name": "webserver",
   "version": "1.0.0",
   "description": "A simple dockerized website using Nginx",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/valtech-sd/docker-nginx-webserver.git"
+    "url": "git+https://github.com/jtacuban/webserver.git"
   },
   "author": "Valtech SD",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/valtech-sd/docker-nginx-webserver/issues"
+    "url": "https://github.com/jtacuban/webserver/issues"
   },
-  "homepage": "https://github.com/valtech-sd/docker-nginx-webserver#readme",
+  "homepage": "https://github.com/jtacuban/webserver#readme",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
