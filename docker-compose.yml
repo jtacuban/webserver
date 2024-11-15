@@ -1,5 +1,5 @@
 # Our basic docker-compose file that does a few convenient things
-version: "3.8"
+#version: "3.8"
 services:
   # Our final image will be known as "website"
   website: 
