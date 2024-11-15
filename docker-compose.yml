@@ -1,0 +1,11 @@
+---
+version: "3.1"
+services:
+  cust-image:
+    container_name: simple-image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8081:80
+    restart: unless-stopped
