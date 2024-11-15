@@ -7,5 +7,5 @@ services:
       context: ./
       dockerfile: Dockerfile
     ports:
-      - 8082:9000
+      - 8082:80
     restart: unless-stopped
