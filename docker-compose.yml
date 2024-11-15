@@ -3,6 +3,7 @@
 services:
   # Our final image will be known as "website"
   website:
+    command: npm run build
     container_name: webserver 
     build:
       context: ./
