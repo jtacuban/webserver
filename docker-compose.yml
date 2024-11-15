@@ -2,9 +2,10 @@
 version: "3.7"
 services:
   # Our final image will be known as "website"
-  website: 
+  website:
+    container_name: webserver 
     build:
-      context: .
+      context: ./
       dockerfile: Dockerfile
 
     # This defines where the working directory will be
