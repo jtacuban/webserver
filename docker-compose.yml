@@ -2,10 +2,10 @@
 version: "3.1"
 services:
   cust-image:
-    container_name: simple-image
+    container_name: webserver
     build:
       context: ./
       dockerfile: Dockerfile
     ports:
-      - 8081:80
+      - 8082:80
     restart: unless-stopped
