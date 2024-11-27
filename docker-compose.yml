@@ -7,5 +7,7 @@ services:
     depends_on:
       - app
     command: /tmp/run_tests.sh
+    ports:
+      - 8080:8080
     volumes:
       - "./run_tests.sh:/tmp/run_tests.sh:ro"
