@@ -8,6 +8,6 @@ services:
       - app
     command: /tmp/run_tests.sh
     ports:
-      - 8080:8080
+      - 8082:8080
     volumes:
       - "./run_tests.sh:/tmp/run_tests.sh:ro"
