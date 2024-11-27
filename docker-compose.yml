@@ -8,6 +8,9 @@ services:
       - "8082:80"
     networks:
       - internal
+    depends_on:
+            - php
+            - mysqldb
   php:
     build:
       context: .
