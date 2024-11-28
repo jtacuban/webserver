@@ -1,5 +1,21 @@
 version: "3"
 services:
+
+  mysqldb:
+        image: mysql:${MYSQL_VERSION}
+        container_name: ${MYSQL_HOST}
+        restart: always
+        env_file:
+            - ".env"
+        environment:
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        ports:
+            - "8989:3306"
+        volumes:
+            - "./data/db/mysql:/var/lib/mysql"
   nginx:
     build:
       context: .
@@ -30,21 +46,6 @@ services:
         restart: always
         depends_on:
             - mysqldb
-  mysqldb:
-        image: mysql:${MYSQL_VERSION}
-        container_name: ${MYSQL_HOST}
-        restart: always
-        env_file:
-            - ".env"
-        environment:
-            - MYSQL_DATABASE=${MYSQL_DATABASE}
-            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-            - MYSQL_USER=${MYSQL_USER}
-            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-        ports:
-            - "8989:3306"
-        volumes:
-            - "./data/db/mysql:/var/lib/mysql"
 networks:
   internal:
     driver: bridge
