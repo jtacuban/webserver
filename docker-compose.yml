@@ -12,6 +12,7 @@ services:
     depends_on:
         mysqldb:
             condition: service_started
+            
   php:
     build:
       context: .
