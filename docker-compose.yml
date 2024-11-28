@@ -11,8 +11,7 @@ services:
       - internal
     depends_on:
         mysqldb:
-            condition: service_healthy
-            restart: true
+            condition: service_started
   php:
     build:
       context: .
@@ -21,6 +20,7 @@ services:
             - mysqldb
     networks:
       - internal
+
   myadmin:
         image: phpmyadmin/phpmyadmin
         container_name: phpmyadmin
