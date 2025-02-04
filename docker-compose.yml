@@ -9,6 +9,8 @@ services:
       - "8082:80"
     networks:
       - internal
+    volumes:
+      - "./data/db/mysql:/var/lib/mysql"
     depends_on:
         mysqldb:
             condition: service_started
